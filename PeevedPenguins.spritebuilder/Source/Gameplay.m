@@ -41,6 +41,8 @@
     _pullbackNode.physicsBody.collisionMask = @[];
     _mouseJointNode.physicsBody.collisionMask = @[];
     
+    _physicsNode.collisionDelegate = self;
+    
 }
 
 //called on every touch in this scene
@@ -139,6 +141,11 @@
 {
     //reload this level
     [[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"Gameplay"]];
+}
+
+-(void)ccPhysicsCollisionPostSolve:(CCPhysicsCollisionPair *)pair seal:(CCNode *)nodeA wilcard:(CCNode *)nodeB
+{
+    CCLOG(@"Something collided with a seal !!");
 }
 
 @end
