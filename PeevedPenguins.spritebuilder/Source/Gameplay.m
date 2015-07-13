@@ -145,7 +145,7 @@
 
 -(void)ccPhysicsCollisionPostSolve:(CCPhysicsCollisionPair *)pair seal:(CCNode *)nodeA wilcard:(CCNode *)nodeB
 {
-    CCLOG(@"Something collided with a seal !!");
+    CCLOG(@"Something collided with a seal!");
 }
 
 @end
